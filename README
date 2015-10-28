@@ -1,3 +1,25 @@
+Initial code was written bt Gunnar Ritter, you can find it here:
+http://heirloom.sourceforge.net/pkgtools.html
+
+I imported it into github so I can change it up a bit to work on
+a more modern OS, Centos 6.6 x86_64 I have included the original 
+README contents, but I can't vouch for their correctness
+
+Building on Centos 6.6:
+you will need to build(make and make install) the heirloom-devtools
+once they are insatlled, then:
+
+yum install  openssl-devel.i686 flex-devel.i686
+make
+make install
+
+There is a hardcoded dependency on the /usr/lib/x86_64-redhat-linux5E/include/stropts.h file,
+which is declared in the libadm/Makefile.mk file. compat-glibc-headers installs this. I don't know
+of a 32 bit version of this file, so I am cheating a bit here.
+
+
+
+
 README file for the Heirloom Packaging Tools
 ============================================
 
