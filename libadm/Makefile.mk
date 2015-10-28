@@ -1,5 +1,6 @@
 .c.o:
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) -I../hdrs $(PATHS) $(WARN) $<
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) -I/usr/lib/x86_64-redhat-linux5E/include \
+  -I../hdrs $(PATHS) $(WARN) $<
 
 
 OBJ = ckdate.o ckgid.o ckint.o ckitem.o ckkeywd.o ckpath.o ckrange.o \
